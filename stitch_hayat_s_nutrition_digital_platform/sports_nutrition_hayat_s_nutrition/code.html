@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sports Nutrition - Hayat's Nutrition</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "secondary": "#4e6073",
+                      "inverse-on-surface": "#f0f1f2",
+                      "inverse-surface": "#2e3132",
+                      "tertiary-fixed-dim": "#ffb961",
+                      "surface-bright": "#f8f9fa",
+                      "primary-fixed-dim": "#4ae183",
+                      "on-primary-fixed": "#00210c",
+                      "on-tertiary-fixed-variant": "#663e00",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#006d37",
+                      "surface-dim": "#d9dadb",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed": "#091d2e",
+                      "on-tertiary-container": "#633c00",
+                      "on-surface-variant": "#3d4a3e",
+                      "on-primary-fixed-variant": "#005228",
+                      "primary-container": "#2ecc71",
+                      "secondary-fixed-dim": "#b5c8df",
+                      "secondary-fixed": "#d1e4fb",
+                      "tertiary-fixed": "#ffddb9",
+                      "surface": "#f8f9fa",
+                      "primary-fixed": "#6bfe9c",
+                      "outline-variant": "#bbcbbb",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-highest": "#e1e3e4",
+                      "error-container": "#ffdad6",
+                      "tertiary-container": "#f8a018",
+                      "surface-container-high": "#e7e8e9",
+                      "surface-container-low": "#f3f4f5",
+                      "surface-container": "#edeeef",
+                      "inverse-primary": "#4ae183",
+                      "secondary-container": "#cfe2f9",
+                      "on-surface": "#191c1d",
+                      "on-tertiary-fixed": "#2b1700",
+                      "on-background": "#191c1d",
+                      "outline": "#6c7b6d",
+                      "on-primary-container": "#005027",
+                      "background": "#f8f9fa",
+                      "primary": "#006d37",
+                      "on-secondary-fixed-variant": "#36485b",
+                      "surface-variant": "#e1e3e4",
+                      "on-secondary-container": "#526478",
+                      "tertiary": "#865300",
+                      "on-secondary": "#ffffff",
+                      "error": "#ba1a1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "xl": "80px",
+                      "md": "24px",
+                      "margin-mobile": "16px",
+                      "lg": "48px",
+                      "margin-desktop": "64px",
+                      "base": "8px",
+                      "xs": "4px"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "headline-xl": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .shadow-ambient {
+            box-shadow: 0 4px 12px rgba(44, 62, 80, 0.08);
+        }
+        .shadow-hover {
+            box-shadow: 0 8px 24px rgba(44, 62, 80, 0.12);
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased pt-[72px] pb-[72px] md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md dark:bg-surface-on-background/90 border-b border-outline-variant/30 dark:border-outline/20 shadow-sm dark:shadow-none hidden md:block">
+<div class="flex justify-between items-center px-gutter py-4 max-w-margin-desktop mx-auto">
+<div class="flex items-center gap-md">
+<button aria-label="Menu" class="text-primary dark:text-primary-fixed hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors hidden">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed">HAYAT</div>
+</div>
+<nav class="hidden md:flex gap-lg">
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors py-2" href="#">Home</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed py-2" href="#">Sports Nutrition</a>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors py-2" href="#">Goals</a>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors py-2" href="#">Meal Plans</a>
+<a class="text-secondary dark:text-secondary-fixed font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors py-2" href="#">Calculators</a>
+</nav>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                Get Plan
+            </button>
+</div>
+</header>
+<!-- TopAppBar Mobile -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm md:hidden flex justify-between items-center px-margin-mobile py-4">
+<button aria-label="Menu" class="text-primary" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-primary">HAYAT</div>
+<button class="text-primary">
+<span class="material-symbols-outlined">person</span>
+</button>
+</header>
+<!-- NavigationDrawer (Hidden by default, shown via JS on mobile) -->
+<aside class="fixed inset-y-0 left-0 w-80 z-[60] flex flex-col p-md bg-surface shadow-xl rounded-r-xl transform -translate-x-full transition-transform duration-300 md:hidden" id="nav-drawer">
+<div class="flex justify-between items-center mb-lg">
+<div class="font-headline-md text-headline-md text-primary">Hayat Nutrition</div>
+<button class="text-on-surface-variant hover:text-primary" id="close-drawer-btn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex items-center gap-4 p-3 bg-secondary-container text-on-secondary-container mx-2 rounded-full transition-all scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-label-md text-label-md">Sports Nutrition</span>
+</a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">target</span>
+<span class="font-label-md text-label-md">Goals</span>
+</a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-label-md text-label-md">Meal Plans</span>
+</a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-label-md text-label-md">Recipes</span>
+</a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-high mx-2 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">calculate</span>
+<span class="font-label-md text-label-md">Calculators</span>
+</a>
+</nav>
+</aside>
+<div class="fixed inset-0 bg-on-background/20 z-50 hidden md:hidden" id="drawer-overlay"></div>
+<main class="max-w-[1280px] mx-auto px-margin-mobile md:px-gutter py-xl">
+<!-- Hero Section -->
+<section class="mb-xl text-center md:text-left grid md:grid-cols-2 gap-lg items-center">
+<div>
+<h1 class="font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-background mb-4">
+                    Nutrition That Works <br class="hidden md:block"/> <span class="text-primary">With Your Training</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-2xl mx-auto md:mx-0">
+                    Clinical precision meets athletic performance. Fuel your workouts, optimize recovery, and achieve your goals with science-backed nutritional strategies tailored to your specific sport and lifestyle.
+                </p>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-3 rounded-full hover:bg-primary/90 transition-colors shadow-ambient hover:shadow-hover">
+                    Explore Plans
+                </button>
+</div>
+<div class="rounded-2xl overflow-hidden shadow-ambient h-[300px] md:h-[400px] relative">
+<div class="bg-cover bg-center w-full h-full" data-alt="A clean, modern clinical sports nutrition setting. A sleek white laboratory counter with fresh green accents. In the foreground, beautifully arranged high-performance food items like a bowl of quinoa, fresh leafy greens, and a pristine glass of protein shake. The lighting is high-key, soft white, emphasizing purity and health. In the blurred background, subtle medical-grade equipment subtly hints at scientific precision. The mood is energetic yet sterile and professional." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDF6ym8yOa4W2iCMGBwzKemST1azjsKwMJePZ6GyJaPkOF2EcFXwkbgIBcXwufRNA2jrMIXF6co5Faj6InbS9k8Ba9p82KCz12wH8XyD3Ac1bSbx1-FEZVASyxKx-PLqoYrmEt1_nlazO-SL6yh5wxzO_Ez9taU-AbUqDJXBTpw1A2BDgtp3q3pKBDXqak0x-K3kAEeShFWVI_M1AWxGufv6Uh_br1s7MKGXLtPACxZS4uf6syRmC280A')"></div>
+</div>
+</section>
+<!-- Workout Phases (Bento Grid) -->
+<section class="mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-8 text-center">The Timeline of Performance</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Pre-Workout -->
+<div class="bg-surface-container-lowest p-md rounded-2xl shadow-ambient hover:shadow-hover transition-shadow border border-outline-variant/20 md:col-span-1">
+<div class="flex items-center gap-sm mb-4">
+<div class="bg-primary-container/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background">Pre-Workout</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Prime your body for exertion. Focus on readily available energy and optimal hydration.</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1 text-[20px]">schedule</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Timing</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">1-3 hours before training</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1 text-[20px]">grain</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Carbohydrates</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">Complex carbs for sustained release</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1 text-[20px]">water_drop</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Hydration</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">500ml of water 2 hours prior</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- During-Workout -->
+<div class="bg-surface-container-lowest p-md rounded-2xl shadow-ambient hover:shadow-hover transition-shadow border border-outline-variant/20 md:col-span-1">
+<div class="flex items-center gap-sm mb-4">
+<div class="bg-primary-container/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">directions_run</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background">During-Workout</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Maintain output and delay fatigue. Crucial for sessions lasting longer than 60 minutes.</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1 text-[20px]">science</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Electrolytes</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">Replenish sodium and potassium lost in sweat</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1 text-[20px]">timer</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Short (&lt; 60m)</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">Water is typically sufficient</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1 text-[20px]">update</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Prolonged (&gt; 60m)</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">30-60g simple carbs per hour</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Post-Workout -->
+<div class="bg-surface-container-lowest p-md rounded-2xl shadow-ambient hover:shadow-hover transition-shadow border border-outline-variant/20 md:col-span-1">
+<div class="flex items-center gap-sm mb-4">
+<div class="bg-primary-container/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">battery_charging_full</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background">Post-Workout</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Kickstart recovery and muscle repair. The "anabolic window" prioritizes protein synthesis.</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1 text-[20px]">egg_alt</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Protein</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">20-40g high-quality protein within 2 hours</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1 text-[20px]">local_drink</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Fluids</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">Replace 150% of fluid weight lost</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1 text-[20px]">bakery_dining</span>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Carbs</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">Restore depleted glycogen stores</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- Rest Day (Span full width on mobile, 2 cols on desktop) -->
+<div class="bg-surface-container-lowest p-md rounded-2xl shadow-ambient hover:shadow-hover transition-shadow border border-outline-variant/20 md:col-span-3 flex flex-col md:flex-row items-center gap-lg">
+<div class="flex-1">
+<div class="flex items-center gap-sm mb-4">
+<div class="bg-primary-container/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background">Rest-Day Nutrition</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Recovery happens on rest days. While caloric needs may drop slightly, micronutrient demands remain high. Focus on anti-inflammatory foods, sustained protein intake for tissue repair, and maintaining adequate hydration even without the stimulus of exercise.</p>
+</div>
+<div class="w-full md:w-1/3 bg-surface-container-low p-4 rounded-xl flex items-center justify-center border border-outline-variant/30">
+<div class="text-center">
+<span class="block font-headline-md text-headline-md text-primary mb-1">Focus On</span>
+<div class="flex flex-wrap justify-center gap-2 mt-3">
+<span class="px-3 py-1 bg-surface-container-lowest border border-outline-variant/50 rounded-full font-label-sm text-label-sm text-on-surface">Omega-3s</span>
+<span class="px-3 py-1 bg-surface-container-lowest border border-outline-variant/50 rounded-full font-label-sm text-label-sm text-on-surface">Antioxidants</span>
+<span class="px-3 py-1 bg-surface-container-lowest border border-outline-variant/50 rounded-full font-label-sm text-label-sm text-on-surface">Fiber</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Nutrition for Your Sport -->
+<section class="mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-2">Nutrition for Your Sport</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-3xl">Different energy systems require different fuels. Select your primary activity to see tailored clinical recommendations.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm md:gap-md">
+<!-- Gym -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/20 shadow-ambient hover:shadow-hover hover:border-primary/30 transition-all cursor-pointer text-center group">
+<span class="material-symbols-outlined text-[40px] text-secondary group-hover:text-primary transition-colors mb-3">fitness_center</span>
+<h4 class="font-label-md text-label-md text-on-surface">Gym &amp; Hypertrophy</h4>
+</div>
+<!-- Running -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/20 shadow-ambient hover:shadow-hover hover:border-primary/30 transition-all cursor-pointer text-center group">
+<span class="material-symbols-outlined text-[40px] text-secondary group-hover:text-primary transition-colors mb-3">sprint</span>
+<h4 class="font-label-md text-label-md text-on-surface">Running</h4>
+</div>
+<!-- Cycling -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/20 shadow-ambient hover:shadow-hover hover:border-primary/30 transition-all cursor-pointer text-center group">
+<span class="material-symbols-outlined text-[40px] text-secondary group-hover:text-primary transition-colors mb-3">directions_bike</span>
+<h4 class="font-label-md text-label-md text-on-surface">Cycling</h4>
+</div>
+<!-- Football -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/20 shadow-ambient hover:shadow-hover hover:border-primary/30 transition-all cursor-pointer text-center group">
+<span class="material-symbols-outlined text-[40px] text-secondary group-hover:text-primary transition-colors mb-3">sports_soccer</span>
+<h4 class="font-label-md text-label-md text-on-surface">Football</h4>
+</div>
+<!-- Cricket -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/20 shadow-ambient hover:shadow-hover hover:border-primary/30 transition-all cursor-pointer text-center group">
+<span class="material-symbols-outlined text-[40px] text-secondary group-hover:text-primary transition-colors mb-3">sports_cricket</span>
+<h4 class="font-label-md text-label-md text-on-surface">Cricket</h4>
+</div>
+<!-- Swimming -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/20 shadow-ambient hover:shadow-hover hover:border-primary/30 transition-all cursor-pointer text-center group">
+<span class="material-symbols-outlined text-[40px] text-secondary group-hover:text-primary transition-colors mb-3">pool</span>
+<h4 class="font-label-md text-label-md text-on-surface">Swimming</h4>
+</div>
+<!-- Yoga -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/20 shadow-ambient hover:shadow-hover hover:border-primary/30 transition-all cursor-pointer text-center group">
+<span class="material-symbols-outlined text-[40px] text-secondary group-hover:text-primary transition-colors mb-3">self_improvement</span>
+<h4 class="font-label-md text-label-md text-on-surface">Yoga &amp; Pilates</h4>
+</div>
+<!-- General Active -->
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/20 shadow-ambient hover:shadow-hover hover:border-primary/30 transition-all cursor-pointer text-center group">
+<span class="material-symbols-outlined text-[40px] text-secondary group-hover:text-primary transition-colors mb-3">directions_walk</span>
+<h4 class="font-label-md text-label-md text-on-surface">General Active</h4>
+</div>
+</div>
+</section>
+<!-- Pre/Post Workout Food Guide (Visual Comparison) -->
+<section class="mb-xl bg-surface-container-low rounded-3xl p-md md:p-lg border border-outline-variant/10">
+<div class="text-center mb-8">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-2">Food Guide: Pre vs Post</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Practical, accessible whole-food options to meet your clinical macronutrient targets.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-lg relative">
+<!-- Divider for Desktop -->
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-outline-variant/30 -translate-x-1/2"></div>
+<!-- Pre-Workout Column -->
+<div class="space-y-6">
+<h3 class="font-headline-md text-headline-md text-primary flex items-center justify-center gap-2 mb-6">
+<span class="material-symbols-outlined">bolt</span> Fast Fuel (Pre)
+                    </h3>
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10 flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<div class="bg-cover bg-center w-full h-full" data-alt="A clean, top-down view of a ripe yellow banana sliced next to a small bowl of fresh, white curd (yogurt) on a pristine white marble surface. Bright, high-key studio lighting emphasizes the natural textures and healthy, clinical aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaAsRAvz9Cf50RW2oF61nJ8YKMZuZX2QW1iAFPI8-3WQ0q6YuI7pM5S4H-YR3zdhE049l8_dSg5PMLkTXKqfVKdEIGIi-ZeD098St7BjnhKLzRT4V-Q55cgvvqtaq1ec9q-QiwTAc3WQMTSyQl-nKIU2MP7yhGt-nwTWa0Jgj5qZvVpvtKJJH117Yh_8Es5NMNkEWcvbQ_UIHVhfqkKma-HSsWwWrRK3WhteE1HiiqHaypFMBTpZfcgQ')"></div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Banana + Curd</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Easily digestible carbs with a light protein base. Low residue.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10 flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<div class="bg-cover bg-center w-full h-full" data-alt="A slice of whole wheat toast topped with smooth peanut butter and a drizzle of honey, set on a minimal white ceramic plate against a light grey background. Clean, bright lighting highlighting the textures." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDUNukRFaKbkwxKOjJrLf1DDP6qpg9FV-MBGhTFM8A_GQGeErHrzO89uBrPuYPJ2fydC24OLH8MNUcl1xIxPWn5xG31q3pFyp9YUzwx0x_4rw2LNNJEnOd_QDszextwJnzxvlKZVU27LjL8G7B51caKW3YGbzjMR4XmBrkK3zX4Cn3cTWbkeLSs3oklo19iXI13lzKuTts4ErwKdPpJ07uw_8d1B3WA7zlDIK68HiyNvLBkL8kWuWbnw')"></div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Toast + Peanut Butter</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Sustained energy release. Good for sessions 2+ hours away.</p>
+</div>
+</div>
+</div>
+<!-- Post-Workout Column -->
+<div class="space-y-6">
+<h3 class="font-headline-md text-headline-md text-secondary flex items-center justify-center gap-2 mb-6">
+<span class="material-symbols-outlined">build</span> Recovery (Post)
+                    </h3>
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10 flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<div class="bg-cover bg-center w-full h-full" data-alt="A professional, appetizing presentation of grilled paneer cubes beside two fresh whole wheat rotis on a clean, modern white plate. Soft, clinical lighting enhances the golden crust of the paneer and the rustic texture of the roti, maintaining a high-end wellness brand look." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASwwXP-NLGGfpueK7tWaHUIZEWfdIKqUEr-3zjhztelsyGKmvRRxHfvtSCz3UsyMQpC5UU7FGuAf6W7fp7H3BFlwpPrahZSgJq7F36c5dngNKDsTjvEB-AMHO047v6CR1ix3lNExc9nuOHdF40NcL_fngAepsd6Q1uGaDASPzDLdvZ3IPbpF5OpXJ5qMln6-kc2zHLyb8Lyk-gcWiEHufyINMpnm1QEjw4Y2Pym5EKjKcSwlZdW7cwdg')"></div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Paneer + Roti</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">High biological value protein combined with complex carbohydrates.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant/10 flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden shrink-0">
+<div class="bg-cover bg-center w-full h-full" data-alt="A sleek, transparent shaker bottle filled with a creamy vanilla protein shake, sitting next to a handful of raw almonds on a clinical white surface. Minimalist, modern sports nutrition aesthetic with high-key lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBosrlfhy3XQWex5yi_IyEfSQ0nqcWSOwikY7jcqJO-M4OibXoUdfSrZKivgwYJIobsmWm35XRQrvhfOAtayrqblWL2_YApFI2SdJIfaGyrndG3VFkFLqkFYdG9wbG_rQjrVUKpL9bPZ3ykGK_rEaXzqT3scZtt30LY-J_f4b1XeBqJMqKCqZMAaNQW3UPqciUshmRFIEres8oYIPzhN3FApL3a72lhJ_9l8xhOM7ZngKNdrCUUTU1vw')"></div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Whey Isolate + Almonds</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-1">Rapid amino acid delivery with healthy fats for satiety.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl px-gutter md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-lg bg-inverse-surface dark:bg-surface-container-lowest border-t border-outline/10 flat no shadows pb-[100px] md:pb-xl">
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-headline-md text-primary-fixed dark:text-primary">HAYAT</div>
+<p class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant text-sm max-w-xs">
+                © 2024 Hayat's Nutrition. All rights reserved. Clinical Performance Nutrition.
+            </p>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-label-sm text-label-sm text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary-container transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary-container transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary-container transition-colors" href="#">Health Disclaimer</a>
+<a class="font-label-sm text-label-sm text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary-container transition-colors" href="#">Sitemap</a>
+</div>
+</footer>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-sm py-base md:hidden bg-surface/95 backdrop-blur-lg dark:bg-inverse-surface/95 z-50 rounded-t-xl shadow-[0_-4px_12px_rgba(44,62,80,0.08)] bg-surface dark:bg-inverse-surface shadow-lg">
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-high dark:hover:bg-surface-variant p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm-mobile mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold bg-primary-container/20 dark:bg-primary-fixed/10 rounded-xl px-3 py-1 scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">nutrition</span>
+<span class="font-label-sm text-label-sm-mobile mt-1">Nutrition</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-high dark:hover:bg-surface-variant p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">dining</span>
+<span class="font-label-sm text-label-sm-mobile mt-1">Plans</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-high dark:hover:bg-surface-variant p-2 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">straighten</span>
+<span class="font-label-sm text-label-sm-mobile mt-1">Calc</span>
+</a>
+</nav>
+<script>
+        // Simple Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeDrawerBtn = document.getElementById('close-drawer-btn');
+        const navDrawer = document.getElementById('nav-drawer');
+        const drawerOverlay = document.getElementById('drawer-overlay');
+
+        function toggleDrawer() {
+            navDrawer.classList.toggle('-translate-x-full');
+            drawerOverlay.classList.toggle('hidden');
+        }
+
+        if(mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleDrawer);
+        if(closeDrawerBtn) closeDrawerBtn.addEventListener('click', toggleDrawer);
+        if(drawerOverlay) drawerOverlay.addEventListener('click', toggleDrawer);
+    </script>
+</body></html>

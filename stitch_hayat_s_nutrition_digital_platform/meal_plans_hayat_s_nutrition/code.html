@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Performance Meal Plans | Hayat's Nutrition</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary": "#4e6073",
+                        "inverse-on-surface": "#f0f1f2",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-fixed-dim": "#ffb961",
+                        "surface-bright": "#f8f9fa",
+                        "primary-fixed-dim": "#4ae183",
+                        "on-primary-fixed": "#00210c",
+                        "on-tertiary-fixed-variant": "#663e00",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#006d37",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#091d2e",
+                        "on-tertiary-container": "#633c00",
+                        "on-surface-variant": "#3d4a3e",
+                        "on-primary-fixed-variant": "#005228",
+                        "primary-container": "#2ecc71",
+                        "secondary-fixed-dim": "#b5c8df",
+                        "secondary-fixed": "#d1e4fb",
+                        "tertiary-fixed": "#ffddb9",
+                        "surface": "#f8f9fa",
+                        "primary-fixed": "#6bfe9c",
+                        "outline-variant": "#bbcbbb",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#f8a018",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container": "#edeeef",
+                        "inverse-primary": "#4ae183",
+                        "secondary-container": "#cfe2f9",
+                        "on-surface": "#191c1d",
+                        "on-tertiary-fixed": "#2b1700",
+                        "on-background": "#191c1d",
+                        "outline": "#6c7b6d",
+                        "on-primary-container": "#005027",
+                        "background": "#f8f9fa",
+                        "primary": "#006d37",
+                        "on-secondary-fixed-variant": "#36485b",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-container": "#526478",
+                        "tertiary": "#865300",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "lg": "48px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center px-gutter py-4 max-w-[1280px] mx-auto">
+<div class="flex items-center gap-sm">
+<button aria-label="Open Menu" class="md:hidden text-primary p-2 hover:bg-surface-container-highest rounded-full transition-colors">
+<span class="material-symbols-outlined text-[24px]" data-icon="menu">menu</span>
+</button>
+<a class="font-headline-lg text-headline-lg font-bold tracking-tight text-primary hover:opacity-80 transition-opacity" href="#">HAYAT</a>
+</div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="font-label-md text-label-md text-secondary font-medium hover:text-primary-container transition-colors py-2" href="#">Home</a>
+<a class="font-label-md text-label-md text-secondary font-medium hover:text-primary-container transition-colors py-2" href="#">Sports Nutrition</a>
+<a class="font-label-md text-label-md text-secondary font-medium hover:text-primary-container transition-colors py-2" href="#">Goals</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary py-2 opacity-80 duration-200" href="#">Meal Plans</a>
+<a class="font-label-md text-label-md text-secondary font-medium hover:text-primary-container transition-colors py-2" href="#">Recipes</a>
+<a class="font-label-md text-label-md text-secondary font-medium hover:text-primary-container transition-colors py-2" href="#">Calculators</a>
+</nav>
+<button class="font-label-md text-label-md bg-primary text-on-primary px-6 py-2.5 rounded-full hover:bg-primary/90 transition-colors shadow-sm">
+                Get Plan
+            </button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-[100px] pb-xl px-margin-mobile md:px-gutter max-w-[1280px] mx-auto">
+<!-- Header Section -->
+<section class="mb-lg text-center md:text-left mt-md">
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-surface mb-sm">Performance Meal Plans</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">Scientifically structured nutrition protocols designed to optimize your training, enhance recovery, and support your specific athletic goals.</p>
+</section>
+<!-- Bento Grid Layout for Plans -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md md:gap-gutter">
+<!-- Vegetarian Athlete (Spans 8 columns) -->
+<article class="col-span-1 md:col-span-8 bg-surface-container-lowest rounded-xl shadow-[0_-4px_12px_rgba(44,62,80,0.08)] overflow-hidden border border-outline-variant/20 hover:shadow-lg transition-shadow duration-300 group">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-2/5 h-64 md:h-auto relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
+<img class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A highly detailed, professional food photography shot of a high-protein vegetarian athletic meal featuring quinoa, grilled halloumi cheese, roasted sweet potatoes, and vibrant green broccoli. The lighting is bright and modern, creating a fresh, clinical performance aesthetic with high-key white lighting and crisp shadows. The overall mood is vibrant and healthy, set against a pristine light grey marble background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2BuM7mg1brjqbxeY2SAZpxTLFKvIPVrROeYvZcySM1lmASY-Ydh8CYZROx64ZxrcazL_c9Evi_BfEXQaz3khAQmy7Fnf0YDdAvfvP5UT5jXKsIBjaT6-zHbySqWB5nLLfJaGGv6crUtANps3wSmB0b23ftETPDVMbp-zMM-4TuStvqHKx-2uz4660lXF5Dhm1yAvw6HM6q4mPk3E4_61f5UCiewhowWPmf5gCOMK_38Ijtqjx5MN9-w"/>
+<div class="absolute top-4 left-4 z-20 flex gap-2">
+<span class="bg-tertiary-container/90 text-on-tertiary-container font-label-sm text-label-sm px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">Plant-Powered</span>
+</div>
+</div>
+<div class="p-md md:p-gutter flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-center gap-2 mb-2 text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+<h2 class="font-headline-md text-headline-md">Vegetarian Athlete</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Optimized plant-based protein combining high-bioavailability sources to support muscular hypertrophy and sustained energy.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+<div class="bg-surface p-4 rounded-lg border border-outline-variant/30">
+<h3 class="font-label-sm text-label-sm text-secondary uppercase mb-1">Target Goal</h3>
+<p class="font-label-md text-label-md text-on-surface">Lean Muscle &amp; Recovery</p>
+</div>
+<div class="bg-surface p-4 rounded-lg border border-outline-variant/30">
+<h3 class="font-label-sm text-label-sm text-secondary uppercase mb-1">Ideal For</h3>
+<p class="font-label-md text-label-md text-on-surface">Strength &amp; Mixed-Sport</p>
+</div>
+</div>
+</div>
+<div class="space-y-4 border-t border-outline-variant/30 pt-4 mt-auto">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5" data-icon="schedule">schedule</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface block">Meal Timing Strategy</span>
+<span class="font-body-md text-body-md text-secondary text-sm block">Carb-heavy pre-workout (2h), Protein-dense post-workout (45m).</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5" data-icon="restaurant">restaurant</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface block">Key Ingredients</span>
+<span class="font-body-md text-body-md text-secondary text-sm block">Tempeh, Greek Yogurt, Quinoa, Hemp Seeds, Lentils.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Vegan Athlete (Spans 4 columns) -->
+<article class="col-span-1 md:col-span-4 bg-surface-container-lowest rounded-xl shadow-[0_-4px_12px_rgba(44,62,80,0.08)] overflow-hidden border border-outline-variant/20 hover:shadow-lg transition-shadow duration-300 flex flex-col group">
+<div class="h-48 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
+<img class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A professional, top-down photograph of a vibrant vegan athlete bowl featuring a base of black rice, topped with crispy tofu cubes, edamame, sliced avocado, and a sprinkle of sesame seeds. The lighting is crisp and natural, highlighting the textures of the fresh ingredients. The setting is modern and clinical, featuring a clean white backdrop that emphasizes purity and performance nutrition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfqamlNkedMhy50DCbOh6Zz1mvSsVfbjoe9nP-KW7dojjDMzXDrlPx1tN9EMeM_on85uSODCvr8J_ntxztx6gP5DoTZugtljjWDseNJhMNnN1GhTQleF8R5o2CVE5NalVitgWOjV8AnMid7vp1EPxD7hr-GknVHRpB-vjSDXSqwKOP9ArOnZAHXezrM2vfnIUQ1Mr3PZF7FZRoIBKnyMGYFKsf36QhfbG7Dfi6Pq2oxIQXextR_3jlXQ"/>
+</div>
+<div class="p-md flex flex-col flex-1">
+<div class="flex items-center gap-2 mb-2 text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="nature">nature</span>
+<h2 class="font-headline-md text-[20px] font-semibold">Vegan Athlete</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 text-sm flex-1">100% plant-based protocol prioritizing amino acid pairing for complete protein profiles.</p>
+<div class="space-y-3 mb-4">
+<div class="bg-surface p-3 rounded-lg border border-outline-variant/30">
+<h3 class="font-label-sm text-label-sm text-secondary uppercase mb-0.5 text-[10px]">Goal</h3>
+<p class="font-label-md text-label-md text-on-surface text-sm">Performance Sustenance</p>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/30 text-sm">
+<div class="flex items-start gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="water_drop">water_drop</span>
+<span class="font-body-md text-on-surface-variant text-xs">Hydration: 3L base + 500ml per hour of training.</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Muscle Gain Plan (Spans 4 columns) -->
+<article class="col-span-1 md:col-span-4 bg-surface-container-lowest rounded-xl shadow-[0_-4px_12px_rgba(44,62,80,0.08)] overflow-hidden border border-outline-variant/20 hover:shadow-lg transition-shadow duration-300 flex flex-col group">
+<div class="h-48 relative overflow-hidden">
+<img class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A high-end food photograph of a muscle-building meal featuring a perfectly seared lean beef steak, a generous portion of white jasmine rice, and steamed asparagus. The lighting is dramatic but clean, using a light grey background to create a modern, clinical sports nutrition aesthetic. The image conveys power, protein density, and structured eating." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMSqUKgdEZH-uYxEkXv1u2Ge13MCYs7I-IPx7QccoX-1fSXusgARuizbq2Ve0jZWRtIM-osEtTsD47ut5PKkvTlC9YdRCOGNk8vFSU7OkQCRYBuO_yYEw0SamBpT3x30QtndazOZBto8TAG_Y6FWi4M3nY9_Zszu8H50za4KNDxnT4uYoOt5D92EGSXLCB-a_P2ifGsK5A0kQD15Zn-CO6EQbklAw0gRjLOMSMVCiFg4wrWWhYm0cP1Q"/>
+<div class="absolute top-3 right-3 z-20">
+<span class="bg-primary/90 text-on-primary font-label-sm text-label-sm px-2 py-1 rounded shadow-sm backdrop-blur-sm">High Calorie</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1">
+<div class="flex items-center gap-2 mb-2 text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="fitness_center">fitness_center</span>
+<h2 class="font-headline-md text-[20px] font-semibold">Hypertrophy Base</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 text-sm flex-1">Caloric surplus protocol with structured macronutrient ratios designed for maximum lean tissue accrual.</p>
+<div class="bg-surface p-3 rounded-lg border border-outline-variant/30 mb-4">
+<h3 class="font-label-sm text-label-sm text-secondary uppercase mb-0.5 text-[10px]">Key Focus</h3>
+<p class="font-label-md text-label-md text-on-surface text-sm">Protein Synthesis &amp; Caloric Density</p>
+</div>
+<div class="pt-3 border-t border-outline-variant/30 text-sm">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="restaurant">restaurant</span>
+<span class="font-body-md text-on-surface-variant text-xs">Lean Beef, White Rice, Eggs, Oats, Whey Isolate.</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Fat Loss + Performance (Spans 4 columns) -->
+<article class="col-span-1 md:col-span-4 bg-surface-container-lowest rounded-xl shadow-[0_-4px_12px_rgba(44,62,80,0.08)] overflow-hidden border border-outline-variant/20 hover:shadow-lg transition-shadow duration-300 flex flex-col group">
+<div class="h-48 relative overflow-hidden">
+<img class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A clean, bright photograph of a fat loss meal featuring grilled chicken breast strips on a bed of voluminous mixed greens with cucumber, cherry tomatoes, and a light vinaigrette. The lighting is high-key and crisp, emphasizing freshness and low-calorie density. The background is a minimalist white marble, aligning with a modern clinical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwzPLUkFcUpHKEYnlotP_52IC9dTTjbTbBaOqAcZAIEl9UMfH5_OS_4JTyXEc8ZANJrzi5pX3uleMvfZUPfAh1MMhRLBJlVyb2LqIUQCFTX1OGdt5DaM2QlLD3blyAbJHTLhpS5WgQnAKgto_p_X_2Tm4r4zlxF7p1I7vPx1qS8uBuYPs63V4-Jw6gpIO4AbmXckhsWxfIrZv8_WzxIrSQmBmXk6sGhaZThDFXfwkVegLVz-OU0q4NgQ"/>
+<div class="absolute top-3 right-3 z-20">
+<span class="bg-secondary/90 text-on-secondary font-label-sm text-label-sm px-2 py-1 rounded shadow-sm backdrop-blur-sm">Deficit</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1">
+<div class="flex items-center gap-2 mb-2 text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="trending_down">trending_down</span>
+<h2 class="font-headline-md text-[20px] font-semibold">Lean Performance</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 text-sm flex-1">Strategic caloric deficit that prioritizes protein to maintain lean mass while optimizing fat oxidation.</p>
+<div class="bg-surface p-3 rounded-lg border border-outline-variant/30 mb-4">
+<h3 class="font-label-sm text-label-sm text-secondary uppercase mb-0.5 text-[10px]">Meal Timing</h3>
+<p class="font-label-md text-label-md text-on-surface text-sm">Carbohydrate targeting around training windows.</p>
+</div>
+<div class="pt-3 border-t border-outline-variant/30 text-sm">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="water_drop">water_drop</span>
+<span class="font-body-md text-on-surface-variant text-xs">High hydration focus to manage satiety signals.</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Endurance Athlete (Spans 4 columns) -->
+<article class="col-span-1 md:col-span-4 bg-surface-container-lowest rounded-xl shadow-[0_-4px_12px_rgba(44,62,80,0.08)] overflow-hidden border border-outline-variant/20 hover:shadow-lg transition-shadow duration-300 flex flex-col group">
+<div class="h-48 relative overflow-hidden">
+<img class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A dynamic, professional shot of an endurance meal featuring a large portion of whole wheat pasta mixed with a light tomato sauce, spinach, and lean turkey meatballs. The aesthetic is modern and energetic, using bright, clean lighting against a sleek, light-toned surface to emphasize glycogen replenishment and sports performance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWQzWq8GmS6yiJMfp5NQd4yCDM4I9JSYT6Mz7ZzVPqeVAWF9Q_5GoalOOtMg-mPFkoGRYlOkA4k9-QQj2zNHriaH321Ajo6a8zHZH772OtKpaiQ7u0VYflYZ355u9nvr6RS1m4DsppMWgDTNeYpYHaoD-hBO7R1c95ZoOPO3SEtP6PaRDCvJEoxwsCm4rTv42NOUGvKPpFmnew6Uoi53U3aD0_3HrvlSvr0yX_KQOF3fNISSK5e93oFA"/>
+</div>
+<div class="p-md flex flex-col flex-1">
+<div class="flex items-center gap-2 mb-2 text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="directions_run">directions_run</span>
+<h2 class="font-headline-md text-[20px] font-semibold">Endurance Protocol</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 text-sm flex-1">High-carbohydrate framework for sustained energy output and rapid glycogen resynthesis during high-volume blocks.</p>
+<div class="bg-surface p-3 rounded-lg border border-outline-variant/30 mb-4">
+<h3 class="font-label-sm text-label-sm text-secondary uppercase mb-0.5 text-[10px]">Ideal For</h3>
+<p class="font-label-md text-label-md text-on-surface text-sm">Runners, Cyclists, Triathletes</p>
+</div>
+<div class="pt-3 border-t border-outline-variant/30 text-sm">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="restaurant">restaurant</span>
+<span class="font-body-md text-on-surface-variant text-xs">Pasta, Sweet Potato, Bananas, Lean Turkey.</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Clinical Disclaimer Section -->
+<div class="mt-xl bg-surface-container-low p-md rounded-xl border border-outline-variant/30 flex items-start gap-md">
+<span class="material-symbols-outlined text-secondary text-[24px]" data-icon="info">info</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-1">Clinical Disclaimer</h4>
+<p class="font-body-md text-body-md text-secondary text-sm">These macronutrient templates are designed for healthy adults engaging in regular physical training. They do not constitute medical advice. Individuals with specific metabolic conditions or dietary restrictions should consult with a certified sports nutritionist or medical professional before beginning a new dietary protocol.</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-sm py-base md:hidden bg-surface/95 backdrop-blur-lg shadow-[0_-4px_12px_rgba(44,62,80,0.08)] z-50 rounded-t-xl transition-transform duration-300">
+<a class="flex flex-col items-center justify-center text-secondary font-label-sm text-label-sm-mobile w-16 h-14 hover:bg-surface-container-high rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary font-label-sm text-label-sm-mobile w-16 h-14 hover:bg-surface-container-high rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="nutrition">nutrition</span>
+<span class="text-[10px]">Nutrition</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold bg-primary-container/20 rounded-xl px-3 py-1 scale-90 duration-200 w-16 h-14" href="#">
+<span class="material-symbols-outlined icon-fill mb-1 text-primary" data-icon="dining">dining</span>
+<span class="text-[10px] text-primary">Plans</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary font-label-sm text-label-sm-mobile w-16 h-14 hover:bg-surface-container-high rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="straighten">straighten</span>
+<span class="text-[10px]">Calc</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-xl px-gutter md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-lg bg-inverse-surface border-t border-outline/10 text-primary-fixed mt-xl pb-[100px] md:pb-xl">
+<div class="flex-1">
+<span class="font-headline-md text-headline-md text-primary-fixed block mb-sm">HAYAT</span>
+<p class="font-body-md text-body-md text-surface-variant max-w-sm">© 2024 Hayat's Nutrition. All rights reserved. Clinical Performance Nutrition.</p>
+</div>
+<div class="flex flex-wrap gap-md md:gap-lg">
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Health Disclaimer</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Sitemap</a>
+</div>
+</footer>
+</body></html>

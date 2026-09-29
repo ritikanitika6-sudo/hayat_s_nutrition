@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nutrition Tools | Hayat's Nutrition</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary": "#4e6073",
+                        "inverse-on-surface": "#f0f1f2",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-fixed-dim": "#ffb961",
+                        "surface-bright": "#f8f9fa",
+                        "primary-fixed-dim": "#4ae183",
+                        "on-primary-fixed": "#00210c",
+                        "on-tertiary-fixed-variant": "#663e00",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#006d37",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#091d2e",
+                        "on-tertiary-container": "#633c00",
+                        "on-surface-variant": "#3d4a3e",
+                        "on-primary-fixed-variant": "#005228",
+                        "primary-container": "#2ecc71",
+                        "secondary-fixed-dim": "#b5c8df",
+                        "secondary-fixed": "#d1e4fb",
+                        "tertiary-fixed": "#ffddb9",
+                        "surface": "#f8f9fa",
+                        "primary-fixed": "#6bfe9c",
+                        "outline-variant": "#bbcbbb",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#f8a018",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container": "#edeeef",
+                        "inverse-primary": "#4ae183",
+                        "secondary-container": "#cfe2f9",
+                        "on-surface": "#191c1d",
+                        "on-tertiary-fixed": "#2b1700",
+                        "on-background": "#191c1d",
+                        "outline": "#6c7b6d",
+                        "on-primary-container": "#005027",
+                        "background": "#f8f9fa",
+                        "primary": "#006d37",
+                        "on-secondary-fixed-variant": "#36485b",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-container": "#526478",
+                        "tertiary": "#865300",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "lg": "48px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.08);
+        }
+        
+        .input-field {
+            transition: all 0.2s ease;
+        }
+        .input-field:focus {
+            border-color: #006d37;
+            box-shadow: 0 0 0 2px rgba(0, 109, 55, 0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased pt-[88px] pb-[80px] md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md dark:bg-surface-on-background/90 border-b border-outline-variant/30 dark:border-outline/20 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-gutter py-4 max-w-margin-desktop mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-primary-fixed hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors opacity-80 duration-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed">HAYAT</span>
+</div>
+<nav class="hidden md:flex gap-6">
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed font-medium hover:text-primary-container dark:hover:text-primary-fixed-dim transition-colors" href="#">Sports Nutrition</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed" href="#">Calculators</a>
+</nav>
+<button class="font-label-md text-label-md bg-primary text-on-primary rounded-full px-4 py-2 hover:bg-on-primary-fixed-variant transition-colors">
+                Get Plan
+            </button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-lg">
+<!-- Header Section -->
+<section class="mb-xl text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-lg">
+<div>
+<h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-on-background mb-4">Nutrition Tools</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Clinical-grade calculators designed to optimize your performance. Establish your baselines, determine your requirements, and fuel your goals with precision.
+                </p>
+</div>
+<div class="hidden md:block w-48 h-48 rounded-full overflow-hidden shadow-lg" data-alt="A sleek, modern digital scale integrated with fresh green vegetables, glowing with a subtle, clean white and green light, set against a pristine, minimalist clinical background. Professional lighting, highly detailed." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7fyjIRjTFrqbz2QkM7xTDVBIFHUcnFq1V1pKQanK4HGx2VvM9L6lRFkTzyoV8jlBmuWop5Rp1SafdAKA-EREcJtnI_c2BKAB-eofvGZiz-cYvbvxgVUwCkriqrBpr6RlZVhAR8hL2jsrP-0FGwlehbOZlVxZf8Qf34nhNDe_f824sFIAzz4zWvI1-giIsUqM9uiQHOgNjvFQ6LDvO4cWqyir0ZCL6jE4cbpOV5avFwnUoquZGWIgUlg')"></div>
+</section>
+<!-- Bento Grid Calculators -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-xl">
+<!-- BMI & BMR Cluster (Left Column) -->
+<div class="md:col-span-5 flex flex-col gap-gutter">
+<!-- BMI Calculator -->
+<div class="glass-card rounded-xl p-md">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">monitor_weight</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">BMI Calculator</h2>
+</div>
+<form class="space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2">Weight (kg)</label>
+<input class="input-field w-full rounded-lg border-outline-variant bg-surface-bright px-3 py-2 font-body-md text-body-md text-on-surface" placeholder="75" type="number"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2">Height (cm)</label>
+<input class="input-field w-full rounded-lg border-outline-variant bg-surface-bright px-3 py-2 font-body-md text-body-md text-on-surface" placeholder="180" type="number"/>
+</div>
+</div>
+<button class="w-full font-label-md text-label-md bg-surface-container text-on-surface rounded-lg py-3 hover:bg-surface-container-high transition-colors" type="button">
+                            Calculate BMI
+                        </button>
+</form>
+</div>
+<!-- BMR Calculator -->
+<div class="glass-card rounded-xl p-md">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">local_fire_department</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">BMR Calculator</h2>
+</div>
+<form class="space-y-4">
+<div class="flex gap-4 mb-2">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="text-primary focus:ring-primary w-5 h-5" name="gender" type="radio"/>
+<span class="font-body-md text-body-md">Male</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="text-primary focus:ring-primary w-5 h-5" name="gender" type="radio"/>
+<span class="font-body-md text-body-md">Female</span>
+</label>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2">Age</label>
+<input class="input-field w-full rounded-lg border-outline-variant bg-surface-bright px-3 py-2 font-body-md text-body-md text-on-surface" placeholder="30" type="number"/>
+</div>
+</div>
+<button class="w-full font-label-md text-label-md bg-surface-container text-on-surface rounded-lg py-3 hover:bg-surface-container-high transition-colors" type="button">
+                            Calculate BMR
+                        </button>
+</form>
+</div>
+</div>
+<!-- Main Energy & Macros (Right Column) -->
+<div class="md:col-span-7 flex flex-col gap-gutter">
+<!-- TDEE & Activity (Hero Card) -->
+<div class="glass-card rounded-xl p-md h-full flex flex-col relative overflow-hidden">
+<!-- Subtle background pattern hint -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container opacity-5 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none"></div>
+<div class="flex items-center gap-3 mb-6 relative z-10">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Estimated Energy Needs</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Total Daily Energy Expenditure (TDEE)</p>
+</div>
+</div>
+<form class="space-y-6 flex-grow flex flex-col justify-between relative z-10">
+<div class="space-y-4">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2">Base BMR (kcal)</label>
+<input class="input-field w-full md:w-1/2 rounded-lg border-outline-variant bg-surface-bright px-3 py-2 font-body-md text-body-md text-on-surface" placeholder="e.g., 1800" type="number"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2">Activity Level Multiplier</label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<label class="border rounded-lg p-3 cursor-pointer hover:bg-surface-container-low transition-colors flex items-start gap-3 border-outline-variant">
+<input class="mt-1 text-primary focus:ring-primary" name="activity" type="radio"/>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Sedentary</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Little or no exercise</span>
+</div>
+</label>
+<label class="border border-primary bg-primary/5 rounded-lg p-3 cursor-pointer flex items-start gap-3">
+<input checked="" class="mt-1 text-primary focus:ring-primary" name="activity" type="radio"/>
+<div>
+<span class="block font-label-md text-label-md text-on-surface">Active</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Moderate exercise 3-5 days/week</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-6 border-t border-outline/10">
+<button class="w-full md:w-auto font-label-md text-label-md bg-primary text-on-primary rounded-full px-8 py-3 hover:bg-on-primary-fixed-variant transition-colors shadow-sm" type="button">
+                                Calculate Energy Needs
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Secondary Calculators Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-xl">
+<!-- Protein Needs -->
+<div class="glass-card rounded-xl p-md">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined">fitness_center</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Protein Needs Estimator</h2>
+</div>
+<form class="space-y-4">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2">Weight (kg)</label>
+<input class="input-field w-full rounded-lg border-outline-variant bg-surface-bright px-3 py-2 font-body-md text-body-md text-on-surface" type="number"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2 flex justify-between">
+<span>Goal Intensity</span>
+<span class="text-primary font-medium">Maintenance</span>
+</label>
+<input class="w-full accent-primary" max="3" min="1" type="range" value="2"/>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mt-1">
+<span>Endurance</span>
+<span>Strength</span>
+</div>
+</div>
+<button class="w-full font-label-md text-label-md bg-surface-container text-on-surface rounded-lg py-3 hover:bg-surface-container-high transition-colors mt-4" type="button">
+                        Estimate Protein
+                    </button>
+</form>
+</div>
+<!-- Hydration Needs -->
+<div class="glass-card rounded-xl p-md">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Hydration Estimator</h2>
+</div>
+<form class="space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2">Weight (kg)</label>
+<input class="input-field w-full rounded-lg border-outline-variant bg-surface-bright px-3 py-2 font-body-md text-body-md text-on-surface" type="number"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2">Exercise (hrs/day)</label>
+<input class="input-field w-full rounded-lg border-outline-variant bg-surface-bright px-3 py-2 font-body-md text-body-md text-on-surface" type="number"/>
+</div>
+</div>
+<button class="w-full font-label-md text-label-md bg-surface-container text-on-surface rounded-lg py-3 hover:bg-surface-container-high transition-colors mt-4" type="button">
+                        Calculate Hydration
+                    </button>
+</form>
+</div>
+</div>
+<!-- Disclaimer Section -->
+<div class="bg-surface-container-low rounded-xl p-md border border-outline/10 text-center md:text-left">
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-start md:items-center justify-center md:justify-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">info</span>
+                These tools provide estimates based on general scientific models. They are not a substitute for professional medical or personalized clinical nutrition advice. Consult with a Hayat nutritionist for a tailored plan.
+            </p>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-sm py-base md:hidden bg-surface/95 backdrop-blur-lg dark:bg-inverse-surface/95 shadow-[0_-4px_12px_rgba(44,62,80,0.08)] bg-surface dark:bg-inverse-surface shadow-lg z-50 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm-mobile mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">nutrition</span>
+<span class="font-label-sm text-label-sm-mobile mt-1">Nutrition</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">dining</span>
+<span class="font-label-sm text-label-sm-mobile mt-1">Plans</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold bg-primary-container/20 dark:bg-primary-fixed/10 rounded-xl px-3 py-1 hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">straighten</span>
+<span class="font-label-sm text-label-sm-mobile mt-1">Calc</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-xl px-gutter md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-lg bg-inverse-surface dark:bg-surface-container-lowest border-t border-outline/10 flat no shadows mt-xl">
+<div>
+<span class="font-headline-md text-headline-md text-primary-fixed dark:text-primary block mb-4">HAYAT</span>
+<p class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant">© 2024 Hayat's Nutrition. All rights reserved. Clinical Performance Nutrition.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-6">
+<a class="font-label-sm text-label-sm text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary-container transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary-container transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary-container transition-colors" href="#">Health Disclaimer</a>
+<a class="font-label-sm text-label-sm text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary-container transition-colors" href="#">Sitemap</a>
+</div>
+</footer>
+</body></html>

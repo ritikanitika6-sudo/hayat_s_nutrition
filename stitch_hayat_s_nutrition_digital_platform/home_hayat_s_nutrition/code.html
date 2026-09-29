@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hayat's Nutrition - Modern Clinical Performance</title>
+<!-- Google Fonts: Montserrat (Headlines) & Inter (Body/Labels) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "secondary": "#4e6073",
+                        "inverse-on-surface": "#f0f1f2",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-fixed-dim": "#ffb961",
+                        "surface-bright": "#f8f9fa",
+                        "primary-fixed-dim": "#4ae183",
+                        "on-primary-fixed": "#00210c",
+                        "on-tertiary-fixed-variant": "#663e00",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#006d37",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#091d2e",
+                        "on-tertiary-container": "#633c00",
+                        "on-surface-variant": "#3d4a3e",
+                        "on-primary-fixed-variant": "#005228",
+                        "primary-container": "#2ecc71",
+                        "secondary-fixed-dim": "#b5c8df",
+                        "secondary-fixed": "#d1e4fb",
+                        "tertiary-fixed": "#ffddb9",
+                        "surface": "#f8f9fa",
+                        "primary-fixed": "#6bfe9c",
+                        "outline-variant": "#bbcbbb",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#f8a018",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container": "#edeeef",
+                        "inverse-primary": "#4ae183",
+                        "secondary-container": "#cfe2f9",
+                        "on-surface": "#191c1d",
+                        "on-tertiary-fixed": "#2b1700",
+                        "on-background": "#191c1d",
+                        "outline": "#6c7b6d",
+                        "on-primary-container": "#005027",
+                        "background": "#f8f9fa",
+                        "primary": "#006d37",
+                        "on-secondary-fixed-variant": "#36485b",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-container": "#526478",
+                        "tertiary": "#865300",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        gutter: "24px",
+                        sm: "12px",
+                        xl: "80px",
+                        md: "24px",
+                        "margin-mobile": "16px",
+                        lg: "48px",
+                        "margin-desktop": "64px",
+                        base: "8px",
+                        xs: "4px"
+                    },
+                    fontFamily: {
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    },
+                    fontSize: {
+                        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "headline-xl": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Custom scrollbar for clean look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f8f9fa; }
+        ::-webkit-scrollbar-thumb { background: #d9dadb; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #bbcbbb; }
+        
+        /* Hydration Tracker specific styles */
+        .water-fill {
+            transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center px-gutter py-4 max-w-margin-desktop mx-auto">
+<button aria-label="Menu" class="p-2 text-on-surface hover:text-primary transition-colors focus:outline-none" id="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-primary">
+                HAYAT
+            </div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg hover:opacity-80 duration-200 shadow-sm">
+                Get Plan
+            </button>
+</div>
+</header>
+<!-- NavigationDrawer (Hidden by default) -->
+<div class="fixed inset-0 bg-on-background/50 z-[55] hidden opacity-0 transition-opacity duration-300" id="drawer-overlay"></div>
+<nav class="fixed inset-y-0 left-0 w-80 z-[60] flex flex-col p-md bg-surface shadow-xl rounded-r-xl transform -translate-x-full transition-transform duration-300" id="nav-drawer">
+<div class="flex justify-between items-center mb-lg">
+<h2 class="font-headline-md text-headline-md text-primary">Hayat Nutrition</h2>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors" id="close-drawer">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 overflow-y-auto">
+<!-- Active Nav Item (Home) -->
+<a class="flex items-center gap-4 py-3 px-4 bg-secondary-container text-on-secondary-container rounded-full mx-2 font-label-md text-label-md scale-95 duration-150" href="#">
+<span class="material-symbols-outlined fill-icon">home</span>
+                Home
+            </a>
+<!-- Inactive Nav Items -->
+<a class="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container-highest transition-all rounded-full mx-2 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">fitness_center</span> Sports Nutrition
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container-highest transition-all rounded-full mx-2 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">target</span> Goals
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container-highest transition-all rounded-full mx-2 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">restaurant_menu</span> Meal Plans
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container-highest transition-all rounded-full mx-2 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">receipt_long</span> Recipes
+            </a>
+<a class="flex items-center gap-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container-highest transition-all rounded-full mx-2 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">calculate</span> Calculators
+            </a>
+</div>
+</nav>
+<main class="pt-24 max-w-[1280px] mx-auto px-margin-mobile md:px-gutter pb-xl flex flex-col gap-xl">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-lg items-center mt-md">
+<div class="flex flex-col gap-sm md:gap-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm rounded-full w-max mb-2">
+<span class="material-symbols-outlined text-[16px]">science</span>
+                    Clinical Performance Nutrition
+                </div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-xl md:text-headline-xl text-on-background">
+                    Fuel Your Body. <br class="hidden md:block"/>
+<span class="text-primary">Elevate Your Performance.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-prose mt-2">
+                    Evidence-based sports nutrition designed to help you perform better, recover smarter, and build a healthier relationship with food. Precision formulations for everyday athletes.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-sm md:mt-md">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-4 rounded-lg hover:opacity-90 transition-opacity shadow-[0_4px_14px_0_rgba(0,109,55,0.39)]">
+                        Get Your Nutrition Plan
+                    </button>
+<button class="border-2 border-secondary text-secondary bg-transparent font-label-md text-label-md px-6 py-4 rounded-lg hover:bg-secondary/5 transition-colors">
+                        Explore Sports Nutrition
+                    </button>
+</div>
+</div>
+<div class="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg border border-outline-variant/20">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center absolute inset-0" data-alt="A highly detailed cinematic shot of a fit, athletic individual in a bright, modern minimalist kitchen, preparing a nutritious post-workout meal. The space is illuminated by soft, natural white daylight creating a clean light-mode aesthetic. A sleek glass bowl containing fresh greens and lean protein sits on a pristine marble countertop. The color palette emphasizes fresh greens, crisp whites, and deep navy accents. The mood is energetic, focused, and professional, perfectly capturing the essence of clinical sports nutrition and vibrant health." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyRtJwpFaY1YvA36aNxXLGYchSdW3ke35gO7O_M3rY71Ow4jhZqp9n4crDoKJ3sDqLtBxIx3-mhVbNDlIargzJKIJeC8INBPHsuXwF79tFcshs81lgd9mJHXDULIpjk2YfdrvQgQw9FEl72GnGcYb7RQOhl9NsC1Fiz02jfHaPHWfuYh-yAhpxljecFHhfnbwP_LZiV7jaH12mk4rFTNWUpggYe13Kyxhnjqx8UespNr9IDK25W2H4vw')"></div>
+</div>
+</section>
+<!-- Quick Benefits (Bento style grid) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md mt-lg">
+<!-- Benefit 1 -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_24px_rgba(44,62,80,0.04)] border border-surface-container hover:shadow-[0_8px_32px_rgba(44,62,80,0.08)] transition-shadow flex flex-col gap-sm">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined">speed</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-[20px] leading-tight">Peak Performance</h3>
+<p class="font-body-md text-body-md text-secondary text-sm">Optimize energy systems for sustained output during high-intensity training sessions.</p>
+</div>
+<!-- Benefit 2 -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_24px_rgba(44,62,80,0.04)] border border-surface-container hover:shadow-[0_8px_32px_rgba(44,62,80,0.08)] transition-shadow flex flex-col gap-sm">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined">fitness_center</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-[20px] leading-tight">Strength &amp; Muscle</h3>
+<p class="font-body-md text-body-md text-secondary text-sm">Targeted macronutrient profiles designed to support myofibrillar hypertrophy and power.</p>
+</div>
+<!-- Benefit 3 -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_24px_rgba(44,62,80,0.04)] border border-surface-container hover:shadow-[0_8px_32px_rgba(44,62,80,0.08)] transition-shadow flex flex-col gap-sm">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-[20px] leading-tight">Smart Recovery</h3>
+<p class="font-body-md text-body-md text-secondary text-sm">Accelerate tissue repair and reduce inflammation with clinically dosed recovery protocols.</p>
+</div>
+<!-- Benefit 4 -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_24px_rgba(44,62,80,0.04)] border border-surface-container hover:shadow-[0_8px_32px_rgba(44,62,80,0.08)] transition-shadow flex flex-col gap-sm">
+<div class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined">monitor_weight</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-[20px] leading-tight">Body Composition</h3>
+<p class="font-body-md text-body-md text-secondary text-sm">Sustainable protocols for fat loss and lean mass retention without severe restriction.</p>
+</div>
+</section>
+<!-- What's Your Goal? -->
+<section class="flex flex-col gap-md pt-lg">
+<div class="flex flex-col gap-2 items-center text-center max-w-2xl mx-auto mb-md">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-background">What's Your Primary Goal?</h2>
+<p class="font-body-md text-body-md text-secondary">Select your focus area to discover tailored nutrition strategies and precise macronutrient guidance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Goal Card 1 -->
+<div class="group relative overflow-hidden rounded-2xl bg-surface-container-lowest border border-outline-variant/30 flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<div class="p-md flex flex-col justify-between flex-1 z-10 bg-white">
+<div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface mb-4">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Muscle Gain</h3>
+<p class="font-body-md text-body-md text-secondary text-sm mb-4">Hypercaloric protocols and precise protein timing for maximal tissue synthesis.</p>
+</div>
+<span class="font-label-md text-label-md text-primary flex items-center gap-1 group-hover:gap-2 transition-all">Learn More <span class="material-symbols-outlined text-[18px]">arrow_forward</span></span>
+</div>
+<div class="w-full md:w-2/5 h-48 md:h-auto bg-surface-container-high relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A detailed close-up shot of heavy cast-iron dumbbells resting on a pristine, light-colored gym floor. The lighting is bright and soft, highlighting the textured grip of the weights against the clean, minimal background. A subtle hint of fresh green light flares in the background, reinforcing a clinical, performance-oriented aesthetic. The mood is strong, disciplined, and focused on physical progression." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgY9twl5cWwkbK55EHDqDlrrgwOUEddmi7YT7H62NJlBIikXOobBGYzIftUD-BcXiMw0WIJKyOgl1AllcdsU_QKbNC8PCtA50jUY7DNc4y-wsqVoZKliO7N4RfwNypWHN6nC6h_GpXkVrvXKU1U2y_67elKQ9Q-jr3bMPvYZOZEcGAmg0_X3RCyaNTH38P4Iwc0uUCNTDUFZ80x6DXRgXp9zV7dJcyy8HeGtGIr542pDq8FsbjU1NTBQ')"></div>
+</div>
+</div>
+<!-- Goal Card 2 -->
+<div class="group relative overflow-hidden rounded-2xl bg-surface-container-lowest border border-outline-variant/30 flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<div class="p-md flex flex-col justify-between flex-1 z-10 bg-white">
+<div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface mb-4">
+<span class="material-symbols-outlined text-[20px]">trending_down</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Fat Loss</h3>
+<p class="font-body-md text-body-md text-secondary text-sm mb-4">Hypocaloric strategies focusing on satiety, micronutrient density, and lean mass preservation.</p>
+</div>
+<span class="font-label-md text-label-md text-primary flex items-center gap-1 group-hover:gap-2 transition-all">Learn More <span class="material-symbols-outlined text-[18px]">arrow_forward</span></span>
+</div>
+<div class="w-full md:w-2/5 h-48 md:h-auto bg-surface-container-high relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A clean top-down shot of a meticulously portioned meal on a white ceramic plate. The meal features grilled lean chicken breast, a precise serving of steamed broccoli, and measured quinoa. A digital food scale sits subtly in the background. The scene is brightly lit with natural, diffuse light on a white marble surface. The overall aesthetic communicates precision, clean eating, and scientific nutritional management." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaTGGz3RAWPXYcxVfNE-IZb2mJlu4c0BZgBCDuftxd-WqzzhM8j9jEicp3Ux8WnmHgnKBdMccfe44BtJZOaL9ShiV9hEQYoU6PkPF31KVImgNWxoLCokp2MF5yvpHk7RhSe9wdb857Zbm5qF5pkANjgRH2kpJMdX4AKy_3100S0cC7gqus6xxMdWzbcD3OBSiQDH9_uqRxQZ0dKupQ-dUut9J-v0RvG24BRt01WH0N3-T19osBbStXDg')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hydration Hub (Interactive UI) -->
+<section class="bg-surface-container-low rounded-3xl p-lg flex flex-col md:flex-row gap-lg items-center border border-outline-variant/20 mt-xl">
+<div class="flex-1 flex flex-col gap-sm">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full w-max mb-2">
+<span class="material-symbols-outlined text-[16px]">water_drop</span>
+                    Daily Tracker
+                </div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-background">Hydrate. Perform. Recover.</h2>
+<p class="font-body-md text-body-md text-secondary mb-4">Proper cellular hydration is critical for nutrient transport, temperature regulation, and maintaining athletic output. Track your daily intake.</p>
+<div class="flex items-center gap-4">
+<button class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center hover:opacity-90 transition-opacity shadow-md focus:outline-none" id="add-water">
+<span class="material-symbols-outlined">add</span>
+</button>
+<span class="font-label-md text-label-md text-on-surface">+250ml Glass</span>
+</div>
+<button class="text-secondary font-label-sm text-label-sm hover:text-on-surface underline mt-2 self-start focus:outline-none" id="reset-water">Reset Tracker</button>
+</div>
+<div class="w-full md:w-1/3 flex justify-center">
+<!-- Visual Water Tracker -->
+<div class="relative w-48 h-64 bg-surface-container-highest rounded-[2rem] border-4 border-surface shadow-inner overflow-hidden flex flex-col justify-end items-center pb-2">
+<!-- Water Level -->
+<div class="water-fill absolute bottom-0 left-0 right-0 bg-secondary-fixed/80 backdrop-blur-sm" id="water-level" style="height: 0%;"></div>
+<!-- Overlay Text -->
+<div class="relative z-10 flex flex-col items-center justify-center h-full w-full pointer-events-none">
+<span class="font-headline-lg text-headline-lg text-on-surface" id="water-amount">0</span>
+<span class="font-label-md text-label-md text-secondary">/ 2500 ml</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl shadow-[0_-4px_12px_rgba(44,62,80,0.08)] bg-surface dark:bg-inverse-surface md:hidden">
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-sm py-base md:hidden bg-surface/95 backdrop-blur-lg">
+<!-- Active Nav Item (Home) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold bg-primary-container/20 dark:bg-primary-fixed/10 rounded-xl px-3 py-1 scale-90 duration-200" href="#">
+<span class="material-symbols-outlined fill-icon mb-1">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<!-- Inactive Items -->
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-high transition-colors rounded-xl px-3 py-1" href="#">
+<span class="material-symbols-outlined mb-1">nutrition</span>
+<span class="font-label-sm text-label-sm text-center">Nutrition</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-high transition-colors rounded-xl px-3 py-1" href="#">
+<span class="material-symbols-outlined mb-1">dining</span>
+<span class="font-label-sm text-label-sm">Plans</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-high transition-colors rounded-xl px-3 py-1" href="#">
+<span class="material-symbols-outlined mb-1">straighten</span>
+<span class="font-label-sm text-label-sm">Calc</span>
+</a>
+</div>
+</nav>
+<!-- Footer (Desktop) -->
+<footer class="w-full py-xl px-gutter md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-lg bg-inverse-surface dark:bg-surface-container-lowest border-t border-outline/10 hidden md:flex">
+<div class="flex flex-col gap-sm max-w-sm">
+<div class="font-headline-md text-headline-md text-primary-fixed dark:text-primary">HAYAT</div>
+<p class="font-label-sm text-label-sm text-surface-variant dark:text-on-surface-variant mt-2 leading-relaxed">
+                Health safety requirement: The information provided on this platform is for general educational purposes only and is not intended to substitute professional medical advice, diagnosis, or treatment. Consult with a qualified healthcare provider before making dietary changes.
+            </p>
+<p class="font-body-md text-body-md text-surface-variant mt-4">
+                © 2024 Hayat's Nutrition. All rights reserved. Clinical Performance Nutrition.
+            </p>
+</div>
+<div class="flex flex-col md:flex-row gap-lg md:gap-xl">
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-inverse-on-surface opacity-50 uppercase tracking-widest">Legal</span>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary-container transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary-container transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary-container transition-colors" href="#">Health Disclaimer</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-inverse-on-surface opacity-50 uppercase tracking-widest">Platform</span>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary-container transition-colors" href="#">Sitemap</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-primary-fixed-dim dark:hover:text-primary-container transition-colors" href="#">Calculators</a>
+</div>
+</div>
+</footer>
+<!-- Interactive Scripts -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navigation Drawer Logic
+            const menuToggle = document.getElementById('menu-toggle');
+            const navDrawer = document.getElementById('nav-drawer');
+            const drawerOverlay = document.getElementById('drawer-overlay');
+            const closeDrawer = document.getElementById('close-drawer');
+
+            function openMenu() {
+                navDrawer.classList.remove('-translate-x-full');
+                drawerOverlay.classList.remove('hidden');
+                // Small delay to allow display:block to apply before changing opacity
+                setTimeout(() => {
+                    drawerOverlay.classList.remove('opacity-0');
+                }, 10);
+            }
+
+            function closeMenu() {
+                navDrawer.classList.add('-translate-x-full');
+                drawerOverlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    drawerOverlay.classList.add('hidden');
+                }, 300); // match transition duration
+            }
+
+            menuToggle.addEventListener('click', openMenu);
+            closeDrawer.addEventListener('click', closeMenu);
+            drawerOverlay.addEventListener('click', closeMenu);
+
+            // Hydration Tracker Logic
+            const addWaterBtn = document.getElementById('add-water');
+            const resetWaterBtn = document.getElementById('reset-water');
+            const waterLevelEl = document.getElementById('water-level');
+            const waterAmountEl = document.getElementById('water-amount');
+            
+            let currentWater = 0;
+            const maxWater = 2500;
+            const step = 250;
+
+            function updateWaterUI() {
+                // Cap at max for visual, but allow number to go slightly over if needed, though visually capped is better
+                const percentage = Math.min((currentWater / maxWater) * 100, 100);
+                waterLevelEl.style.height = `${percentage}%`;
+                
+                // Animate number count (simple version)
+                waterAmountEl.textContent = currentWater;
+                
+                // Change color slightly when full
+                if(currentWater >= maxWater) {
+                    waterLevelEl.classList.remove('bg-secondary-fixed/80');
+                    waterLevelEl.classList.add('bg-primary-container/80');
+                } else {
+                    waterLevelEl.classList.add('bg-secondary-fixed/80');
+                    waterLevelEl.classList.remove('bg-primary-container/80');
+                }
+            }
+
+            addWaterBtn.addEventListener('click', () => {
+                if (currentWater < maxWater) {
+                    currentWater += step;
+                    updateWaterUI();
+                }
+            });
+
+            resetWaterBtn.addEventListener('click', () => {
+                currentWater = 0;
+                updateWaterUI();
+            });
+        });
+    </script>
+</body></html>
