@@ -1,0 +1,377 @@
+export const sportsCategories = [
+  {
+    id: 'gym',
+    name: 'Gym & Hypertrophy',
+    icon: 'fitness_center',
+    tag: 'Strength & Power',
+    summary: 'Optimized for progressive overload, myofibrillar muscle protein synthesis, and nervous system recovery.',
+    preWorkout: '30-45g complex carbs + 20g protein 90 min before training. Adequate sodium for cellular pump.',
+    duringWorkout: '500-750ml water with electrolytes if workout exceeds 60 min. Intra-workout EAAs optional.',
+    postWorkout: '30-40g rapid-digesting whey or plant protein with 40-60g carbs within 90 minutes.',
+    targetMacros: 'Protein: 1.8-2.2g/kg | Carbs: 4-6g/kg | Fats: 0.8-1.0g/kg',
+    keyFocus: ['Leucine Threshold', 'Hydration & Pump', 'Systemic Recovery']
+  },
+  {
+    id: 'running',
+    name: 'Running & Marathon',
+    icon: 'sprint',
+    tag: 'Aerobic Endurance',
+    summary: 'Focuses on sustained glycogen availability, gastric comfort, and electrolyte loss mitigation.',
+    preWorkout: 'Easily digestible low-fiber carbs (banana, toast, white rice) 1-2 hours prior. Minimal fat.',
+    duringWorkout: '30-60g carbohydrate gels or drink mix per hour on runs over 70 minutes.',
+    postWorkout: '4:1 Carb-to-protein ratio immediately post-run to accelerate glycogen resynthesis.',
+    targetMacros: 'Protein: 1.4-1.7g/kg | Carbs: 6-10g/kg | Fats: 1.0-1.2g/kg',
+    keyFocus: ['Glycogen Sparing', 'Gut Training', 'Electrolyte Balance']
+  },
+  {
+    id: 'cycling',
+    name: 'Cycling & Peloton',
+    icon: 'directions_bike',
+    tag: 'Sustained Power Output',
+    summary: 'High hourly caloric expenditure requiring steady intra-ride carbohydrate and fluid replacement.',
+    preWorkout: 'Oatmeal with berries and a light protein source 2-3 hours before wheels up.',
+    duringWorkout: '60-90g dual-source (glucose/fructose) carbs/hour for high-intensity or long climbs.',
+    postWorkout: 'Electrolyte rehydration drink followed by a nutrient-dense whole food meal within 2 hours.',
+    targetMacros: 'Protein: 1.5-1.8g/kg | Carbs: 7-10g/kg | Fats: 1.0g/kg',
+    keyFocus: ['Dual-Transporter Carbs', 'Fluid Turnover', 'Leg Muscle Repair']
+  },
+  {
+    id: 'football',
+    name: 'Football & Soccer',
+    icon: 'sports_soccer',
+    tag: 'Intermittent High-Intensity',
+    summary: 'Demands both aerobic stamina and explosive phosphagen sprint intervals across 90+ minutes.',
+    preWorkout: 'Balanced moderate-glycemic meal 3 hours prior; light fruit or bar 45 mins before kickoff.',
+    duringWorkout: 'Isotonic electrolyte beverage at halftime with 20-30g fast-acting carbohydrates.',
+    postWorkout: 'High-antioxidant recovery meal with tart cherry juice, lean poultry or paneer, and quinoa.',
+    targetMacros: 'Protein: 1.6-2.0g/kg | Carbs: 5-8g/kg | Fats: 1.0g/kg',
+    keyFocus: ['Halftime Glycogen Top-up', 'Collision Recovery', 'Cramp Prevention']
+  },
+  {
+    id: 'cricket',
+    name: 'Cricket',
+    icon: 'sports_cricket',
+    tag: 'Multi-Day Endurance & Agility',
+    summary: 'Prolonged heat exposure and intermittent explosive bursts requiring temperature regulation and mental clarity.',
+    preWorkout: 'Hydrating, electrolyte-balanced meal with slow-digesting grains (millets, oats) and curd.',
+    duringWorkout: 'Electrolyte rehydration solution every 30 minutes in humid or hot pitch conditions.',
+    postWorkout: 'Rehydration at 150% of weight lost, coupled with anti-inflammatory recovery foods.',
+    targetMacros: 'Protein: 1.5-1.8g/kg | Carbs: 4-6g/kg | Fats: 1.0g/kg',
+    keyFocus: ['Thermal Stress Mitigation', 'Mental Alertness', 'Sustained Stamina']
+  },
+  {
+    id: 'swimming',
+    name: 'Swimming & Aquatic',
+    icon: 'pool',
+    tag: 'Full-Body Resistance & Cardio',
+    summary: 'Submerged activity with high caloric burn and hidden sweat rates that often deceive sensation.',
+    preWorkout: 'Light, non-greasy carbs 60-90 mins prior to prevent esophageal reflux during horizontal swimming.',
+    duringWorkout: 'Sip electrolyte water poolside every 20-30 laps.',
+    postWorkout: 'Warm recovery shake or broth with complete proteins and warm complex carbohydrates.',
+    targetMacros: 'Protein: 1.6-2.0g/kg | Carbs: 5-8g/kg | Fats: 1.0-1.2g/kg',
+    keyFocus: ['Core Temperature Balance', 'Reflux Prevention', 'Lat & Shoulder Repair']
+  },
+  {
+    id: 'yoga',
+    name: 'Yoga & Pilates',
+    icon: 'self_improvement',
+    tag: 'Flexibility, Core & Control',
+    summary: 'Focuses on myofascial flexibility, joint lubrication, and cellular anti-inflammatory nutrition.',
+    preWorkout: 'Light hydration with lemon water or coconut water 45 mins before practice. Empty stomach preferred.',
+    duringWorkout: 'Room temperature water as needed between flows.',
+    postWorkout: 'Clean protein bowl with leafy greens, healthy fats (avocado, nuts), and anti-inflammatory spices (turmeric).',
+    targetMacros: 'Protein: 1.3-1.6g/kg | Carbs: 3-5g/kg | Fats: 1.0-1.3g/kg',
+    keyFocus: ['Joint Lubrication', 'Digestive Lightness', 'Stress Hormone Regulation']
+  },
+  {
+    id: 'active',
+    name: 'General Active Lifestyle',
+    icon: 'directions_walk',
+    tag: 'Metabolic Health & Longevity',
+    summary: 'Foundational clinical nutrition designed for sustainable daily energy, fat management, and vitality.',
+    preWorkout: 'Whole food balance: whole fruit, handful of almonds, or a cup of green tea.',
+    duringWorkout: 'Plain water throughout moderate 45-60 minute sessions.',
+    postWorkout: 'Balanced Mediterranean or clinical plate: 1/2 vegetables, 1/4 clean protein, 1/4 complex carb.',
+    targetMacros: 'Protein: 1.2-1.6g/kg | Carbs: 3-5g/kg | Fats: 0.8-1.0g/kg',
+    keyFocus: ['Blood Sugar Stability', 'Fiber Richness', 'Vital Micronutrients']
+  }
+];
+
+export const mealPlans = [
+  {
+    id: 'vegetarian-athlete',
+    title: 'Vegetarian Athlete',
+    tag: 'Plant-Powered',
+    tagColor: 'bg-tertiary-container/90 text-on-tertiary-container',
+    cols: 'md:col-span-8',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB2BuM7mg1brjqbxeY2SAZpxTLFKvIPVrROeYvZcySM1lmASY-Ydh8CYZROx64ZxrcazL_c9Evi_BfEXQaz3khAQmy7Fnf0YDdAvfvP5UT5jXKsIBjaT6-zHbySqWB5nLLfJaGGv6crUtANps3wSmB0b23ftETPDVMbp-zMM-4TuStvqHKx-2uz4660lXF5Dhm1yAvw6HM6q4mPk3E4_61f5UCiewhowWPmf5gCOMK_38Ijtqjx5MN9-w',
+    targetGoal: 'Lean Muscle & Recovery',
+    idealFor: 'Strength & Mixed-Sport Athletes',
+    description: 'Optimized plant-based protein combining high-bioavailability sources to support muscular hypertrophy and sustained energy.',
+    timing: 'Carb-heavy pre-workout (2h), Protein-dense post-workout (45m).',
+    ingredients: 'Tempeh, Greek Yogurt, Quinoa, Hemp Seeds, Lentils, Cottage Cheese, Chickpeas.',
+    macros: { calories: '2,600 kcal', protein: '150g', carbs: '320g', fats: '75g' },
+    schedule: [
+      { time: '07:30 AM', meal: 'Breakfast', detail: 'Overnight oats with chia seeds, whey/soy isolate, blueberries & crushed walnuts' },
+      { time: '11:00 AM', meal: 'Mid-Morning', detail: 'Sprouted moong salad with diced cucumber, lime and pumpkin seeds' },
+      { time: '01:30 PM', meal: 'Lunch', detail: 'Quinoa bowl with grilled paneer or tempeh, steamed broccoli and tahini drizzle' },
+      { time: '05:00 PM', meal: 'Pre-Workout', detail: 'Banana with almond butter on sprouted wheat toast' },
+      { time: '07:30 PM', meal: 'Post-Workout', detail: 'Recovery protein smoothie with tart cherries and coconut water' },
+      { time: '09:00 PM', meal: 'Dinner', detail: 'Lentil dal with brown rice, roasted asparagus, and low-fat curd' }
+    ]
+  },
+  {
+    id: 'vegan-athlete',
+    title: 'Vegan Athlete',
+    tag: '100% Plant-Based',
+    tagColor: 'bg-primary-container/90 text-on-primary-container',
+    cols: 'md:col-span-4',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAfqamlNkedMhy50DCbOh6Zz1mvSsVfbjoe9nP-KW7dojjDMzXDrlPx1tN9EMeM_on85uSODCvr8J_ntxztx6gP5DoTZugtljjWDseNJhMNnN1GhTQleF8R5o2CVE5NalVitgWOjV8AnMid7vp1EPxD7hr-GknVHRpB-vjSDXSqwKOP9ArOnZAHXezrM2vfnIUQ1Mr3PZF7FZRoIBKnyMGYFKsf36QhfbG7Dfi6Pq2oxIQXextR_3jlXQ',
+    targetGoal: 'Performance Sustenance',
+    idealFor: 'Endurance & Vegan Lifters',
+    description: '100% plant-based protocol prioritizing amino acid pairing for complete protein profiles and maximum micronutrient density.',
+    timing: 'Regular 3-hour protein feedings to hit leucine threshold.',
+    ingredients: 'Tofu, Edamame, Black Rice, Pea/Rice Protein, Nutritional Yeast, Flaxseed.',
+    macros: { calories: '2,400 kcal', protein: '135g', carbs: '310g', fats: '68g' },
+    schedule: [
+      { time: '08:00 AM', meal: 'Breakfast', detail: 'Tofu scramble with spinach, turmeric, nutritional yeast, and seeded sourdough' },
+      { time: '01:00 PM', meal: 'Lunch', detail: 'Black rice & edamame nourish bowl with avocado, pickled cabbage and sesame' },
+      { time: '04:30 PM', meal: 'Pre-Train', detail: 'Medjool dates stuffed with walnut halves' },
+      { time: '07:30 PM', meal: 'Dinner', detail: 'Chickpea & coconut curry over steamed sweet potatoes with steamed greens' }
+    ]
+  },
+  {
+    id: 'hypertrophy-base',
+    title: 'Hypertrophy Base',
+    tag: 'High Calorie Surplus',
+    tagColor: 'bg-primary/90 text-on-primary',
+    cols: 'md:col-span-4',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBMSqUKgdEZH-uYxEkXv1u2Ge13MCYs7I-IPx7QccoX-1fSXusgARuizbq2Ve0jZWRtIM-osEtTsD47ut5PKkvTlC9YdRCOGNk8vFSU7OkQCRYBuO_yYEw0SamBpT3x30QtndazOZBto8TAG_Y6FWi4M3nY9_Zszu8H50za4KNDxnT4uYoOt5D92EGSXLCB-a_P2ifGsK5A0kQD15Zn-CO6EQbklAw0gRjLOMSMVCiFg4wrWWhYm0cP1Q',
+    targetGoal: 'Protein Synthesis & Mass Accrual',
+    idealFor: 'Bodybuilders & Hardgainers',
+    description: 'Caloric surplus protocol with structured macronutrient ratios designed for maximum lean tissue accrual without excessive fat gain.',
+    timing: 'Pre/post workout carbohydrates surrounding high-volume sessions.',
+    ingredients: 'Lean Beef/Chicken, Jasmine Rice, Whole Eggs, Oats, Whey Isolate, Olive Oil.',
+    macros: { calories: '3,200 kcal', protein: '190g', carbs: '420g', fats: '85g' },
+    schedule: [
+      { time: '07:00 AM', meal: 'Meal 1', detail: '4 whole eggs, 100g rolled oats cooked in milk with honey and sliced banana' },
+      { time: '11:00 AM', meal: 'Meal 2', detail: '200g lean chicken breast or paneer with 1.5 cups jasmine rice and avocado' },
+      { time: '03:00 PM', meal: 'Meal 3 (Pre)', detail: 'Cream of rice with 1 scoop whey isolate and crushed blueberries' },
+      { time: '06:30 PM', meal: 'Meal 4 (Post)', detail: '200g grilled lean beef or salmon with baked potato and grilled zucchini' },
+      { time: '09:30 PM', meal: 'Meal 5', detail: 'Greek yogurt with casein, peanut butter and dark chocolate shavings' }
+    ]
+  },
+  {
+    id: 'lean-performance',
+    title: 'Lean Performance',
+    tag: 'Caloric Deficit',
+    tagColor: 'bg-secondary/90 text-on-secondary',
+    cols: 'md:col-span-4',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDwzPLUkFcUpHKEYnlotP_52IC9dTTjbTbBaOqAcZAIEl9UMfH5_OS_4JTyXEc8ZANJrzi5pX3uleMvfZUPfAh1MMhRLBJlVyb2LqIUQCFTX1OGdt5DaM2QlLD3blyAbJHTLhpS5WgQnAKgto_p_X_2Tm4r4zlxF7p1I7vPx1qS8uBuYPs63V4-Jw6gpIO4AbmXckhsWxfIrZv8_WzxIrSQmBmXk6sGhaZThDFXfwkVegLVz-OU0q4NgQ',
+    targetGoal: 'Fat Oxidation & Lean Preservation',
+    idealFor: 'Cutting & Weight Class Athletes',
+    description: 'Strategic caloric deficit that prioritizes protein and fiber to maintain lean muscle mass while optimizing fat oxidation.',
+    timing: 'Carbohydrate targeting strictly clustered around the training window.',
+    ingredients: 'Egg Whites, Chicken Breast, White Fish, Leafy Greens, Broccoli, Berries, Cucumbers.',
+    macros: { calories: '1,950 kcal', protein: '175g', carbs: '150g', fats: '48g' },
+    schedule: [
+      { time: '08:00 AM', meal: 'Breakfast', detail: 'Egg white omelet with mushrooms and baby spinach, 1 slice sourdough' },
+      { time: '12:30 PM', meal: 'Lunch', detail: 'Large voluminous garden salad with grilled chicken breast and lemon vinaigrette' },
+      { time: '04:30 PM', meal: 'Pre-Workout', detail: 'Green apple with 15g whey isolate in cold water' },
+      { time: '07:30 PM', meal: 'Dinner', detail: 'Steamed white fish or tofu with 150g baked sweet potato and steamed asparagus' }
+    ]
+  },
+  {
+    id: 'endurance-protocol',
+    title: 'Endurance Protocol',
+    tag: 'Glycogen Focus',
+    tagColor: 'bg-tertiary-container/90 text-on-tertiary-container',
+    cols: 'md:col-span-4',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBWQzWq8GmS6yiJMfp5NQd4yCDM4I9JSYT6Mz7ZzVPqeVAWF9Q_5GoalOOtMg-mPFkoGRYlOkA4k9-QQj2zNHriaH321Ajo6a8zHZH772OtKpaiQ7u0VYflYZ355u9nvr6RS1m4DsppMWgDTNeYpYHaoD-hBO7R1c95ZoOPO3SEtP6PaRDCvJEoxwsCm4rTv42NOUGvKPpFmnew6Uoi53U3aD0_3HrvlSvr0yX_KQOF3fNISSK5e93oFA',
+    targetGoal: 'Mitochondrial Efficiency & Glycogen',
+    idealFor: 'Marathoners, Triathletes, Cyclists',
+    description: 'High-carbohydrate framework for sustained aerobic energy output and rapid glycogen resynthesis during high-mileage training blocks.',
+    timing: 'High carb replenishment immediately post-session to maximize glycogen synthase.',
+    ingredients: 'Whole Wheat Pasta, Sweet Potatoes, Bananas, Lean Turkey, Electrolytes, Honey.',
+    macros: { calories: '2,800 kcal', protein: '130g', carbs: '440g', fats: '60g' },
+    schedule: [
+      { time: '06:30 AM', meal: 'Pre-Run', detail: '2 slices white sourdough with pure honey and 1 ripe banana' },
+      { time: '09:30 AM', meal: 'Post-Run Shake', detail: 'Hydration electrolyte mix with 25g whey and 60g dextrose/maltodextrin' },
+      { time: '01:00 PM', meal: 'Lunch', detail: 'Whole wheat pasta with lean turkey meatballs or red lentils and rich marinara' },
+      { time: '07:30 PM', meal: 'Dinner', detail: 'Baked sweet potatoes with steamed green beans and grilled wild salmon' }
+    ]
+  }
+];
+
+export const foodComparisonGuide = {
+  pre: [
+    {
+      title: 'Banana + Curd',
+      tag: 'Fast Digestion',
+      desc: 'Easily digestible natural fructose and glucose paired with a light, soothing protein base. Extremely low gut residue for smooth workouts.',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDaAsRAvz9Cf50RW2oF61nJ8YKMZuZX2QW1iAFPI8-3WQ0q6YuI7pM5S4H-YR3zdhE049l8_dSg5PMLkTXKqfVKdEIGIi-ZeD098St7BjnhKLzRT4V-Q55cgvvqtaq1ec9q-QiwTAc3WQMTSyQl-nKIU2MP7yhGt-nwTWa0Jgj5qZvVpvtKJJH117Yh_8Es5NMNkEWcvbQ_UIHVhfqkKma-HSsWwWrRK3WhteE1HiiqHaypFMBTpZfcgQ',
+      macros: '32g Carbs | 8g Protein | 1g Fat | 170 kcal',
+      timing: '45-60 min before session'
+    },
+    {
+      title: 'Toast + Peanut Butter',
+      tag: 'Sustained Energy',
+      desc: 'Complex carbohydrates combined with healthy fats. Ideal for heavy leg days or training sessions starting 2 or more hours away.',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDUNukRFaKbkwxKOjJrLf1DDP6qpg9FV-MBGhTFM8A_GQGeErHrzO89uBrPuYPJ2fydC24OLH8MNUcl1xIxPWn5xG31q3pFyp9YUzwx0x_4rw2LNNJEnOd_QDszextwJnzxvlKZVU27LjL8G7B51caKW3YGbzjMR4XmBrkK3zX4Cn3cTWbkeLSs3oklo19iXI13lzKuTts4ErwKdPpJ07uw_8d1B3WA7zlDIK68HiyNvLBkL8kWuWbnw',
+      macros: '28g Carbs | 10g Protein | 14g Fat | 275 kcal',
+      timing: '90-120 min before session'
+    }
+  ],
+  post: [
+    {
+      title: 'Paneer + Roti',
+      tag: 'Whole Food Recovery',
+      desc: 'High biological value casein and whey proteins from fresh paneer combined with the steady complex carbohydrates of whole wheat.',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuASwwXP-NLGGfpueK7tWaHUIZEWfdIKqUEr-3zjhztelsyGKmvRRxHfvtSCz3UsyMQpC5UU7FGuAf6W7fp7H3BFlwpPrahZSgJq7F36c5dngNKDsTjvEB-AMHO047v6CR1ix3lNExc9nuOHdF40NcL_fngAepsd6Q1uGaDASPzDLdvZ3IPbpF5OpXJ5qMln6-kc2zHLyb8Lyk-gcWiEHufyINMpnm1QEjw4Y2Pym5EKjKcSwlZdW7cwdg',
+      macros: '42g Carbs | 24g Protein | 16g Fat | 410 kcal',
+      timing: 'Within 45-90 min post workout'
+    },
+    {
+      title: 'Whey Isolate + Almonds',
+      tag: 'Rapid Amino Delivery',
+      desc: 'Fast amino acid absorption to rapidly trigger muscle protein synthesis, with raw almonds providing vitamin E to reduce oxidative muscle stress.',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCBosrlfhy3XQWex5yi_IyEfSQ0nqcWSOwikY7jcqJO-M4OibXoUdfSrZKivgwYJIobsmWm35XRQrvhfOAtayrqblWL2_YApFI2SdJIfaGyrndG3VFkFLqkFYdG9wbG_rQjrVUKpL9bPZ3ykGK_rEaXzqT3scZtt30LY-J_f4b1XeBqJMqKCqZMAaNQW3UPqciUshmRFIEres8oYIPzhN3FApL3a72lhJ_9l8xhOM7ZngKNdrCUUTU1vw',
+      macros: '6g Carbs | 28g Protein | 9g Fat | 215 kcal',
+      timing: 'Within 30-45 min post workout'
+    }
+  ]
+};
+
+export const primaryGoals = [
+  {
+    id: 'muscle-gain',
+    title: 'Muscle Gain & Hypertrophy',
+    short: 'Muscle Gain',
+    icon: 'add_circle',
+    badge: 'Hypercaloric',
+    desc: 'Hypercaloric protocols and precise protein timing for maximal tissue synthesis and strength gains.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAgY9twl5cWwkbK55EHDqDlrrgwOUEddmi7YT7H62NJlBIikXOobBGYzIftUD-BcXiMw0WIJKyOgl1AllcdsU_QKbNC8PCtA50jUY7DNc4y-wsqVoZKliO7N4RfwNypWHN6nC6h_GpXkVrvXKU1U2y_67elKQ9Q-jr3bMPvYZOZEcGAmg0_X3RCyaNTH38P4Iwc0uUCNTDUFZ80x6DXRgXp9zV7dJcyy8HeGtGIr542pDq8FsbjU1NTBQ',
+    caloricRule: '+300 to +500 kcal surplus above maintenance',
+    proteinTarget: '1.8 - 2.2 g per kg of bodyweight',
+    carbTarget: '4.0 - 7.0 g per kg to sustain intense lifting',
+    clinicalFocus: 'Optimize leucine threshold (3g per feeding) every 3-4 hours to trigger mTOR signaling.'
+  },
+  {
+    id: 'fat-loss',
+    title: 'Fat Loss & Preservation',
+    short: 'Fat Loss',
+    icon: 'trending_down',
+    badge: 'Hypocaloric',
+    desc: 'Hypocaloric strategies focusing on satiety, micronutrient density, and lean mass preservation.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAaTGGz3RAWPXYcxVfNE-IZb2mJlu4c0BZgBCDuftxd-WqzzhM8j9jEicp3Ux8WnmHgnKBdMccfe44BtJZOaL9ShiV9hEQYoU6PkPF31KVImgNWxoLCokp2MF5yvpHk7RhSe9wdb857Zbm5qF5pkANjgRH2kpJMdX4AKy_3100S0cC7gqus6xxMdWzbcD3OBSiQDH9_uqRxQZ0dKupQ-dUut9J-v0RvG24BRt01WH0N3-T19osBbStXDg',
+    caloricRule: '-300 to -500 kcal deficit below maintenance',
+    proteinTarget: '2.0 - 2.4 g per kg to prevent catabolic breakdown',
+    carbTarget: '2.0 - 3.5 g per kg timed around workouts',
+    clinicalFocus: 'High thermic effect of food (TEF), 30g+ daily dietary fiber, and high hydration to regulate ghrelin.'
+  },
+  {
+    id: 'endurance-peak',
+    title: 'Aerobic & Endurance Peak',
+    short: 'Endurance',
+    icon: 'directions_run',
+    badge: 'Glycogen Density',
+    desc: 'Maximizing glycogen resynthesis, mitochondrial biogenesis, and optimal power-to-weight ratio.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBWQzWq8GmS6yiJMfp5NQd4yCDM4I9JSYT6Mz7ZzVPqeVAWF9Q_5GoalOOtMg-mPFkoGRYlOkA4k9-QQj2zNHriaH321Ajo6a8zHZH772OtKpaiQ7u0VYflYZ355u9nvr6RS1m4DsppMWgDTNeYpYHaoD-hBO7R1c95ZoOPO3SEtP6PaRDCvJEoxwsCm4rTv42NOUGvKPpFmnew6Uoi53U3aD0_3HrvlSvr0yX_KQOF3fNISSK5e93oFA',
+    caloricRule: 'Isocaloric to slight surplus on high-mileage blocks',
+    proteinTarget: '1.4 - 1.7 g per kg for muscle repair',
+    carbTarget: '6.0 - 10.0 g per kg depending on training duration',
+    clinicalFocus: 'Gut carbohydrate absorption capacity (glucose:fructose 2:1) and electrolyte replenishment.'
+  },
+  {
+    id: 'recovery-wellness',
+    title: 'Cellular Recovery & Longevity',
+    short: 'Recovery',
+    icon: 'health_and_safety',
+    badge: 'Anti-Inflammatory',
+    desc: 'Systemic reduction of oxidative stress, joint cartilage support, and endocrine hormonal balance.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDF6ym8yOa4W2iCMGBwzKemST1azjsKwMJePZ6GyJaPkOF2EcFXwkbgIBcXwufRNA2jrMIXF6co5Faj6InbS9k8Ba9p82KCz12wH8XyD3Ac1bSbx1-FEZVASyxKx-PLqoYrmEt1_nlazO-SL6yh5wxzO_Ez9taU-AbUqDJXBTpw1A2BDgtp3q3pKBDXqak0x-K3kAEeShFWVI_M1AWxGufv6Uh_br1s7MKGXLtPACxZS4uf6syRmC280A',
+    caloricRule: 'Maintenance with nutrient-dense bioavailable whole foods',
+    proteinTarget: '1.4 - 1.8 g per kg with high collagen/glycine content',
+    carbTarget: '3.0 - 4.5 g per kg low-glycemic antioxidant-rich sources',
+    clinicalFocus: 'Polyphenols, Omega-3 fatty acids (EPA/DHA), Magnesium glycinate, and sleep hygiene.'
+  }
+];
+
+export const performanceRecipes = [
+  {
+    id: 'protein-smoothie-bowl',
+    title: 'Clinical Green Power Smoothie',
+    category: 'Post-Workout / Breakfast',
+    time: '5 mins',
+    calories: '380 kcal',
+    protein: '32g',
+    carbs: '45g',
+    fats: '8g',
+    ingredients: [
+      '1 scoop Whey or Plant Isolate (Vanilla)',
+      '1 cup Baby Spinach & 1/2 cup Cucumber',
+      '1 frozen Banana',
+      '1 cup Unsweetened Almond Milk or Coconut Water',
+      '1 tbsp Chia Seeds',
+      '1/2 tsp Spirulina powder'
+    ],
+    instructions: 'Blend all ingredients on high until silky smooth. Top with pumpkin seeds and fresh blueberries for an antioxidant boost.'
+  },
+  {
+    id: 'quinoa-paneer-bowl',
+    title: 'High-Protein Quinoa & Spiced Paneer',
+    category: 'Lunch / Muscle Fuel',
+    time: '20 mins',
+    calories: '520 kcal',
+    protein: '36g',
+    carbs: '58g',
+    fats: '16g',
+    ingredients: [
+      '150g Low-fat Paneer (or firm Tofu) cut into cubes',
+      '3/4 cup Cooked Tricolor Quinoa',
+      '1 cup Steamed Broccoli & Zucchini',
+      '1/2 tsp Cumin, Paprika & Turmeric',
+      '1 tbsp Cold-pressed Olive Oil',
+      'Fresh Lemon & Cilantro'
+    ],
+    instructions: 'Lightly sear the spiced paneer in olive oil for 4 minutes. Plate over warm fluffy quinoa and steamed greens. Squeeze fresh lemon juice over top.'
+  },
+  {
+    id: 'overnight-endurance-oats',
+    title: 'Glycogen Replenish Overnight Oats',
+    category: 'Pre-Workout / Breakfast',
+    time: '5 mins prep (overnight)',
+    calories: '440 kcal',
+    protein: '26g',
+    carbs: '68g',
+    fats: '9g',
+    ingredients: [
+      '1 cup Rolled Oats',
+      '1 scoop Vanilla Whey or Pea Protein',
+      '1 tbsp Ground Flaxseed',
+      '1.25 cups Skim or Oat Milk',
+      '1 tbsp Pure Honey or Maple',
+      '1/2 cup Mixed Berries'
+    ],
+    instructions: 'Mix oats, protein, flaxseed, and milk in a mason jar. Chill overnight. Top with fresh berries and raw honey before morning training.'
+  },
+  {
+    id: 'anti-inflammatory-salmon',
+    title: 'Omega-3 Rich Salmon & Sweet Potato',
+    category: 'Dinner / Deep Recovery',
+    time: '25 mins',
+    calories: '580 kcal',
+    protein: '42g',
+    carbs: '48g',
+    fats: '22g',
+    ingredients: [
+      '180g Wild Salmon fillet (or Marinated Tempeh)',
+      '1 medium Roasted Sweet Potato with skin',
+      '1.5 cups Sautéed Asparagus & Garlic',
+      '1 tbsp Extra Virgin Olive Oil',
+      'Sea Salt, Cracked Black Pepper, Dill'
+    ],
+    instructions: 'Season salmon with dill and sea salt. Pan-sear for 4 mins each side until crispy yet tender. Serve alongside baked sweet potato and garlic asparagus.'
+  }
+];
+
