@@ -132,6 +132,21 @@ export async function resetWaterTracker() {
   }, null);
 }
 
+export const hydrationService = {
+  get: async () => {
+    const data = await getHydrationStatus();
+    return { success: true, data };
+  },
+  log: async (amount = 250) => {
+    const data = await logWaterIntake(amount);
+    return { success: true, data };
+  },
+  reset: async () => {
+    const data = await resetWaterTracker();
+    return { success: true, data };
+  }
+};
+
 // ----------------- PLAN GENERATION -----------------
 
 export async function generatePersonalizedPlan(inputs) {
